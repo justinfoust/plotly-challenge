@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Belly Button Biodiversity</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <select id="selDataset"></select>
+        
+        <div id="hbar-plot"></div>
+        
+        <div id="bubble-plot"></div>
+        
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">Demographic Info</div>
+            <div class="card-body">
+                <ul style="list-style: none; padding-left: 0;">
+                    <li >ID: <span id="id"></span></li>
+                    <li >Ethnicity: <span id="ethnicity"></span></li>
+                    <li >Gender: <span id="genter"></span></li>
+                    <li >Age: <span id="age"></span></li>
+                    <li >Location: <span id="location"></span></li>
+                    <li >Belly Button Type: <span id="bbtype"></span></li>
+                    <li >Washing Frequency: <span id="wfreq"></span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="gauge-plot"></div>
+
+<!-- Reference Javascript and data files -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+        <script src="samples.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
