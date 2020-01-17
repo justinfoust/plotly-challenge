@@ -9,30 +9,66 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <select id="selDataset"></select>
-        
-        <div id="hbar-plot"></div>
-        
-        <div id="bubble-plot"></div>
-        
-        <div class="card" style="width: 18rem;">
-            <div class="card-header">Demographic Info</div>
-            <div class="card-body">
-                <ul style="list-style: none; padding-left: 0;">
-                    <li >ID: <span id="id"></span></li>
-                    <li >Ethnicity: <span id="ethnicity"></span></li>
-                    <li >Gender: <span id="genter"></span></li>
-                    <li >Age: <span id="age"></span></li>
-                    <li >Location: <span id="location"></span></li>
-                    <li >Belly Button Type: <span id="bbtype"></span></li>
-                    <li >Washing Frequency: <span id="wfreq"></span></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div id="gauge-plot"></div>
+        <div class="container">
 
-<!-- Reference Javascript and data files -->
+            <div class="row">
+                <div class="col jumbotron text-center">
+
+                    <h1 class="display-3">
+                        <strong>Belly Button Biodiversity Dashboard</strong>
+                    </h1>
+                    <h4>
+                        Use the interactive charts below to explore the dataset
+                    </h4>
+
+                </div>
+            </div>
+
+            <div class="row align-items-start">
+                <div class="col">
+                    <div class="p-2 mb-3 bg-secondary text-white border">
+                        <h5>
+                            Test Subject ID No.:
+                        </h5>
+
+                        <select id="selDataset"></select>
+                    </div>
+
+                    <div class="card border-primary mb-3">
+                        <h5 class="card-header bg-primary text-white">Demographic Info</h5>
+                        <div class="card-body">
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li >ID: <span id="id"></span></li>
+                                <li >Ethnicity: <span id="ethnicity"></span></li>
+                                <li >Gender: <span id="genter"></span></li>
+                                <li >Age: <span id="age"></span></li>
+                                <li >Location: <span id="location"></span></li>
+                                <li >Belly Button Type: <span id="bbtype"></span></li>
+                                <li >Washing Frequency: <span id="wfreq"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div id="hbar-plot"></div>
+                </div>
+
+                <div class="col text-center align-items-start">
+                    <div id="gauge-plot"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div id="bubble-plot"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Reference Javascript and data files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
         <script src="samples.js"></script>
         <script src="app.js"></script>
