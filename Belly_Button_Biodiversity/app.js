@@ -3,6 +3,7 @@
 ///   Justin Foust  --  01/16/2020  --  Data Boot Camp      ///
 ///---------------------------------------------------------///
 
+d3.json("samples.json").then(function(sampleData) {
 
 var samples = sampleData;
 
@@ -186,7 +187,7 @@ function updatePlotly() {
     var hbarX = filteredData.sample_values.slice(0,10).reverse();
     var hbarY = filteredData.otu_ids.slice(0,10).reverse().map(x => `OTU ${x}`);
     var hbarUpdate = {
-        title: `Top Ten OTUs for ${filteredData.id}`
+        title: `<b>Top Ten OTUs for ${filteredData.id}</b>`
     }
 
     Plotly.restyle("hbar-plot", "x", [hbarX]);
@@ -200,7 +201,7 @@ function updatePlotly() {
     var bubbleX = filteredData.otu_ids;
     var bubbleY = filteredData.sample_values;
     var bubbleUpdate = {
-        title: `Top Ten OTUs for ${filteredData.id}`,
+        title: `<b>Top Ten OTUs for ${filteredData.id}</b>`,
         size: filteredData.sample_values,
         color: filteredData.otu_ids
     };
@@ -231,3 +232,5 @@ function updatePlotly() {
 }
 
 init()
+    
+});
